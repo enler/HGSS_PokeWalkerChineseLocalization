@@ -22,18 +22,14 @@ blx		MI_CpuFill32
 
 .org 0x21FA93C
 HookClearPokeWalkerPlayerData:
-push	{r4-r6, lr}
+push	{r4-r5, lr}
 mov	r4, r0
-ldr		r1, =0x128
+ldr		r1, =0x12C
 ldr		r5, [r4, r1]
-add	r1, #4
-ldr		r6, [r4, r1]
 bl		ClearPokeWalkerPlayerData
-ldr		r0, =0x128
+ldr		r0, =0x12C
 str		r5, [r4, r0]
-add	r0, #4
-str		r6, [r4, r0]
-pop	{r4-r6, pc}
+pop	{r4-r5, pc}
 
 .pool
 
