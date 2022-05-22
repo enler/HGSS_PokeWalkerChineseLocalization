@@ -4,7 +4,7 @@
 .definelabel MI_CpuFill32, 0x020D40D0
 .definelabel ClearPokeWalkerPlayerData, 0x020321C8
 
-.open "overlay9_0112_SS.bin", 0x021E4E40
+.open "overlay9_0112_HG.bin", 0x021E4E40
 
 .org 0x021EB5CE
 bl		HookClearPokeWalkerPlayerData
